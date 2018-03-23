@@ -153,8 +153,8 @@
             "config-opts": ["--buildtype=release"],
             "sources": [{
                     "type": "archive",
-                    "url": "https://github.com/bitseater/weather/archive/0.6.0.tar.gz",
-                    "sha256": "6fbd65dd814a288016653832a5f10fa853c070c3439e4e7ff27329cd0620b585"
+                    "url": "https://github.com/bitseater/weather/archive/0.7-beta.tar.gz",
+                    "sha256": "765e29fcf227b6d53a8f0d9c119fd6ac6f00adb82274d4f73f27e56474ac2cbc"
                 }
             ]
         }
