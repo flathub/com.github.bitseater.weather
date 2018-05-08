@@ -151,8 +151,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://github.com/bitseater/weather/archive/0.8.0.tar.gz",
-                    "sha256" : "fb0443270131dcdd2f3e9378d987f5b7d5388fa7280f84064699c034fc88ba7b"
+                    "url" : "https://github.com/bitseater/weather/archive/0.8.1.tar.gz",
+                    "sha256" : "8299e801532a54440172a2233f479d1c5083db8966d4a3be057f5d09e9cf75aa"
                 }
             ]
         }
