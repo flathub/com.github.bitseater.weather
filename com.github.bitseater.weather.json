@@ -4,8 +4,8 @@
     "runtime-version" : "3.26",
     "sdk" : "org.gnome.Sdk",
     "command" : "com.gitlab.bitseater.meteo",
-    "rename-destkop-file": "com.gitlab.bitseater.meteo",
-    "rename-appdata-file": "com.gitlab.bitseater.meteo",
+    "rename-destkop-file": "com.gitlab.bitseater.meteo.desktop",
+    "rename-appdata-file": "com.gitlab.bitseater.meteo.appdata.xml",
     "reame-icon": "com.gitlab.bitseater.meteo",
     "copy-icon": true,
     "build-options" : {
