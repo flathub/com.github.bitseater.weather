@@ -1,0 +1,11 @@
+--- a/data/com.gitlab.bitseater.meteo.appdata.xml.in	2018-08-07 01:34:08.000000000 +0200
++++ b/data/com.gitlab.bitseater.meteo.appdata.xml.in	2018-10-17 13:33:54.907742042 +0200
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <!-- Copyright 2017-2018 Carlos Suárez <bitseater@gmail.com> -->
+ <component type="desktop-application">
+-    <id>com.gitlab.bitseater.meteo.desktop</id>
++    <id>com.github.bitseater.weather</id>
+     <metadata_license>CC0-1.0</metadata_license>
+     <project_license>GPL-3.0+</project_license>
+     <update_contact>bitseater@gmail</update_contact>
