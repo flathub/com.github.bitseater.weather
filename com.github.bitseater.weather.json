@@ -1,0 +1,86 @@
+{
+    "app-id": "com.github.bitseater.weather",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "3.30",
+    "sdk": "org.gnome.Sdk",
+    "command": "com.gitlab.bitseater.meteo",
+    "rename-desktop-file": "com.gitlab.bitseater.meteo.desktop",
+    "rename-appdata-file": "com.gitlab.bitseater.meteo.appdata.xml",
+    "rename-icon": "com.gitlab.bitseater.meteo",
+    "copy-icon": true,
+    "cleanup": [
+        "/include",
+        "/lib/pkgconfig",
+        "/lib/debug",
+        "/share/vala",
+        "/man",
+        "*.a",
+        "*.la"
+    ],
+    "finish-args": [
+        "--share=ipc",
+        "--socket=x11",
+        "--device=dri",
+        "--socket=wayland",
+        "--share=network",
+        "--system-talk-name=org.freedesktop.GeoClue2",
+        "--filesystem=xdg-run/dconf",
+        "--filesystem=~/.config/dconf:ro",
+        "--talk-name=ca.desrt.dconf",
+        "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
+    ],
+    "modules": [
+        {
+            "name": "libgee",
+            "make-install-args": [
+                "girdir=/app/share/gir-1.0",
+                "typelibdir=/app/lib/girepository-1.0"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/GNOME/libgee/archive/0.20.0.tar.gz",
+                    "sha256": "42fe6d651910cb8b720167f71c5255a1b7b1afc82fecd3f31e61f9602b3b1335"
+                }
+            ]
+        },
+        {
+            "name": "champlain",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/libchamplain/0.12/libchamplain-0.12.16.tar.xz",
+                    "sha256": "4a7e31cf7889669aebf04631543af64435edd989685159b804911c6005db908d"
+                }
+            ]
+        },
+        {
+            "name": "geocode-glib",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://ftp.gnome.org/pub/GNOME/sources/geocode-glib/3.24/geocode-glib-3.24.0.tar.xz",
+                    "sha256": "19c1fef4fd89eb4bfe6decca45ac45a2eca9bb7933be560ce6c172194840c35e"
+                }
+            ]
+        },
+        {
+            "name": "weather",
+            "buildsystem": "meson",
+            "config-opts": [
+                "--buildtype=release"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://gitlab.com/bitseater/meteo/-/archive/0.8.5/meteo-0.8.5.tar.gz",
+                    "sha256": "9be780d2c2574110144add10f999a9c5207d830bf01e240950ba878441b09f4f"
+                },
+                {
+                    "type": "patch",
+                    "path": "app-id.patch"
+                }
+            ]
+        }
+    ]
+}
